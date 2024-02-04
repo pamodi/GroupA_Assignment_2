@@ -119,6 +119,13 @@ func main() {
 		fmt.Println(number, "is odd")
 	}
 	fmt.Println("")
+
+	fmt.Println("====Starting the function done by Kamalpreet Kaur which will give sum of n numbers====")
+	var num1 int //Declared an integer variable represent n numbers
+	fmt.Print("Enter a number upto you want the sum:")
+	fmt.Scan(&num1) //Take input fromthe user.
+	//Using Printf to print the values in a format.
+	fmt.Printf("The total of first %d number is %d", num1, sum(num1))
 }
 
 // Created by Tejaswi Cheripally - 500229934
@@ -234,4 +241,16 @@ func calculateAndDisplaySimpleInterest() {
 
 	// Displaying the result
 	fmt.Printf("The simple interest is: %f\n", interest)
+}
+
+//Created by Kamalpreet Kaur - 500218943
+//This function print the sum of first n numbers.
+
+func sum(digit int) int { //function with return type integer and 1 integer parameter
+	var total int
+	total = 0
+	for i := 1; i <= digit; i++ { //This loop retrieve all values upto entered digit
+		total = total + i // Adding all retrieved values
+	}
+	return total //Return sum of all numbers.
 }
