@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"strings"
 )
 
 func main() {
@@ -126,6 +127,17 @@ func main() {
 	fmt.Scan(&num1) //Take input fromthe user.
 	//Using Printf to print the values in a format.
 	fmt.Printf("The total of first %d number is %d", num1, sum(num1))
+
+	fmt.Println("====Starting the function done by Rohit which check whether a word is palindrome====")
+	var str string //Declaring variable with data type string
+	fmt.Print("Enter a string:")
+	fmt.Scan(&str)       //Taking user input.
+	if palindrome(str) { //Final comparions to print.
+		fmt.Printf("%s is a palindrome", str)
+	} else {
+		fmt.Printf("%s is not a palindrome", str)
+	}
+
 }
 
 // Created by Tejaswi Cheripally - 500229934
@@ -253,4 +265,19 @@ func sum(digit int) int { //function with return type integer and 1 integer para
 		total = total + i // Adding all retrieved values
 	}
 	return total //Return sum of all numbers.
+}
+
+//Created by Rohit - 500230041
+//This function will check whether provided string is a palindrome or not.
+
+func palindrome(palin string) bool { //Function with string as parameeter and boolean data type.
+	palin = strings.ToLower(palin) // string.ToLower() func will lower the case of given string.
+
+	for i, j := 0, len(palin)-1; i < j; i, j = i+1, j-1 {
+		if palin[i] != palin[j] { //Comparing the main string and reversed string.
+			return false //Will return false if the reversed string don't match.
+		}
+	}
+	return true
+
 }
