@@ -51,13 +51,14 @@ func main() {
 	var year int
 
 	fmt.Print("Enter a year: ")
-	fmt.Scan(&year)
+	fmt.Scanln(&year)
 
 	if isLeapYear(year) {
 		fmt.Println(year, "is a leap year.")
 	} else {
 		fmt.Println(year, "is not a leap year.")
 	}
+	fmt.Println("")
 
 	fmt.Println("====Starting the function done by Mohammed Abdul which Reverse the String====")
 	//Reverse a String
@@ -99,6 +100,7 @@ func main() {
 
 	fmt.Println("====Starting the function done by Shubham Bathla which is accepting principal amount, rate of Interest and time of loan during execution and output Simple Interest====")
 	calculateAndDisplaySimpleInterest()
+	fmt.Println("")
 
 	fmt.Println("====Starting the function done by Mandeep Kaur which will check even or odd====")
 
@@ -116,7 +118,7 @@ func main() {
 		//print that it’s odd
 		fmt.Println(number, "is odd")
 	}
-
+	fmt.Println("")
 }
 
 // Created by Tejaswi Cheripally - 500229934
