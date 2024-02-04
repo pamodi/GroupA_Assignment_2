@@ -100,6 +100,23 @@ func main() {
 	fmt.Println("====Starting the function done by Shubham Bathla which is accepting principal amount, rate of Interest and time of loan during execution and output Simple Interest====")
 	calculateAndDisplaySimpleInterest()
 
+	fmt.Println("====Starting the function done by Mandeep Kaur which will check even or odd====")
+
+	var number int
+	fmt.Print("Input any number: ")
+
+	// Taking input from user
+	fmt.Scanln(&number)
+
+	// Validating even or odd
+	if isEven(number) {
+		//print that it’s even
+		fmt.Println(number, "is even")
+	} else {
+		//print that it’s odd
+		fmt.Println(number, "is odd")
+	}
+
 }
 
 // Created by Tejaswi Cheripally - 500229934
@@ -137,6 +154,10 @@ func fibonacci(limit int) []int {
 		series = append(series, nextNum)
 	}
 	return series
+}
+
+func isEven(num int) bool {
+	return num%2 == 0 // If num is divisible by 2 with no remainder, it’s even.
 }
 
 // Created by Abhisheik Yadla - 500219580
